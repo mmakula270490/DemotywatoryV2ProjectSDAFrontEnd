@@ -1,0 +1,31 @@
+.topBar{
+    background-color: black;
+    height: 10%;
+    width: 100%;
+}
+.mainText{
+    font-size: larger;
+    padding-left: 45%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    color : white;
+}
+.loginButton{
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    position:relative;
+    left: 85%;
+    bottom: 50%;
+}
+.addButton{
+    visibility: visible;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    position:relative;
+    left: 88%;
+    bottom: 50%;
+}

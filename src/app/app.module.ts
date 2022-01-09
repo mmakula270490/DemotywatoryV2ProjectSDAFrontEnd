@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { AddDemotComponent } from './add-demot/add-demot.component';
+import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
-import { TopBarComponent} from './top-bar/top-bar.component';
- 
+import { TopBarComponent } from './main/top-bar/top-bar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,10 +15,10 @@ import { TopBarComponent} from './top-bar/top-bar.component';
     AddDemotComponent,
     MainComponent,
     TopBarComponent
-  
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

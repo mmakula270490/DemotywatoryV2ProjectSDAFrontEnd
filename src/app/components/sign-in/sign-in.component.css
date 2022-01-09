@@ -1,10 +1,16 @@
+.box{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height: 92%;
+}
+
 .registration{
-    background-color: black;
-    height: 100%;
-    width: 25%;
-    padding-left: 20%;
-    padding-top: 10%;
-    padding-bottom: 5%;
+    background-color: gray;
+    padding-left: 15%;
+    padding-top: 5%;
 }
 
 .registrationText{
@@ -40,17 +46,29 @@
 
 .registrationButton{
     position: relative;
-    width: 20%;
-    height: 5%;
+    width: 25%;
+    height: 8%;
     font-size: 25px;
     font-weight: bold;
-    background-color: tomato;
+    background-color: RGB(166, 19, 3);
+    color: white;
 }
 
 .login{
     background-color: tomato;
-    height: 100%;
-    width: 25%;
+    
+    
+ 
+}
+
+.returnToMain{
+    width: 100%;
+    height: 8%;
+    background-color: RGB(166, 19, 3);
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+
 }
 
 

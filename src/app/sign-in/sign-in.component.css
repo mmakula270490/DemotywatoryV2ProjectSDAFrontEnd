@@ -1,0 +1,56 @@
+.registration{
+    background-color: black;
+    height: 100%;
+    width: 25%;
+    padding-left: 20%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.registrationText{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+.loginText{
+    color: white;
+    padding-top: 1%;
+}
+
+.emailText{
+    color: white;
+    padding-top: 1%;
+}
+
+.passwordText{
+    color: white;
+    padding-top: 1%;
+}
+
+.repeatPasswrodText{
+    color: white;
+    padding-top: 1%;
+}
+
+.spaceButton{
+    padding-bottom: 3%;
+}
+
+.registrationButton{
+    position: relative;
+    width: 20%;
+    height: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: tomato;
+}
+
+.login{
+    background-color: tomato;
+    height: 100%;
+    width: 25%;
+}
+
+

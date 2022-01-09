@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { AddDemotComponent } from './add-demot/add-demot.component';
+import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import { TopBarComponent} from './main/top-bar/top-bar.component';
 import { LoginButtonComponent } from './login-button/login-button.component';
@@ -20,11 +21,11 @@ import { MainTextComponent } from './main-text/main-text.component';
     LoginButtonComponent,
     AddButtonComponent,
     MainTextComponent,
-    
-  
+    SignInComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,5 +11,4 @@ export class AddDemotComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

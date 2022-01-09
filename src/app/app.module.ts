@@ -4,8 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { AddDemotComponent } from './add-demot/add-demot.component';
+import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
-import { TopBarComponent} from './main/top-bar/top-bar.component';
+import { TopBarComponent } from './main/top-bar/top-bar.component';
 
 @NgModule({
   declarations: [
@@ -13,12 +14,11 @@ import { TopBarComponent} from './main/top-bar/top-bar.component';
     SignInComponent,
     AddDemotComponent,
     MainComponent,
-    TopBarComponent,
-    
-  
+    TopBarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

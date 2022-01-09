@@ -1,0 +1,10 @@
+.addButton{
+    visibility: visible;
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    position:relative;
+    left: 95%;
+    bottom: 50%;
+}

@@ -1,0 +1,9 @@
+.loginButton{
+    background-color: black;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    position:relative;
+    left: 85%;
+    bottom: 50%;
+}

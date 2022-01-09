@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
+  show: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  public showContent(){
+    this.show = true;
+  }
 }

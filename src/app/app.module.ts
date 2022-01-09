@@ -10,6 +10,7 @@ import { TopBarComponent} from './components/top-bar/top-bar.component';
 import { LoginButtonComponent } from './components/login-button/login-button.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { MainTextComponent } from './components/main-text/main-text.component';
+import { TopBarGenericComponent } from './top-bar-generic/top-bar-generic.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MainTextComponent } from './components/main-text/main-text.component';
     LoginButtonComponent,
     AddButtonComponent,
     MainTextComponent,
-    SignInComponent
+    SignInComponent,
+    TopBarGenericComponent
   ],
   imports: [
     BrowserModule,

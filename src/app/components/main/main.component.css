@@ -19,7 +19,6 @@
 }
 .bottomText{
     margin-left: 40%;
-    margin-bottom: 2%;
     width: 15%;
    
     text-align: center;  
@@ -32,7 +31,7 @@
     width: 80px;
     background-color: #4CAF50;
     border-radius: 12px;
-    padding: 6px;
+    padding: 2px;
     color: blue;
     text-align: center;
     text-decoration: none;
@@ -45,7 +44,7 @@
     width: 80px;
     background-color: red;
     border-radius: 12px;
-    padding: 6px;
+    padding: 2px;
     color: white;
     text-align: center;
     text-decoration: none;

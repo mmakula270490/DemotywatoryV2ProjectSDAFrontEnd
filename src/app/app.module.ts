@@ -14,7 +14,8 @@ import { TopBarComponent } from './main/top-bar/top-bar.component';
     SignInComponent,
     AddDemotComponent,
     MainComponent,
-    TopBarComponent
+    TopBarComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,32 @@
+.registration{
+    background-color: black;
+    height: 100%;
+    width: 25%;
+    padding-left: 20%;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.addText{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+.title{
+    color: white;
+    padding-top: 1%;
+}
+
+.addButon{
+    padding-top: 5%;
+    position: relative;
+    width: 20%;
+    height: 5%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: white;
+}
+
+

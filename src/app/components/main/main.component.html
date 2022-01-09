@@ -1,12 +1,8 @@
-<app-top-bar></app-top-bar>
-<ol class="mainList">
-    <li class="topText">xyz</li>
-    <li class="img1"><img src="assets/img/demot1.jpg" alt="oops nie wiem ocb"height="500px" width="500px" ></li>
-    <li class="bottomText">zyx</li>
-    <li><button class="likeButton" >like</button><button class="dislikeButton">dislike</button></li>
+<app-top-bar>
+    <app-main-text></app-main-text>
+    <app-add-button></app-add-button>
+    <app-login-button></app-login-button>
+</app-top-bar>
 
-    <li class="topText">abc</li>
-    <li class="img2"><img src="assets/img/demot2.jpg"></li>
-    <li class="bottomText">cba</li>
-    <li><button class="likeButton" >like</button><button class="dislikeButton">dislike</button></li>
+<ol class="mainList" *ngfor="let demot from demoty">
 </ol>

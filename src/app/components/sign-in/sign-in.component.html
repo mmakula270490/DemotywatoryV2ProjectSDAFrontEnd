@@ -1,12 +1,13 @@
+
 <div class="box">
     <div style="width: 50%; float: left;" class="registration">
         <div class="registrationText">Rejestracja</div>
-        <div class="loginText">Login</div>
-        <input type="login" id="loginInput" name="loginInput" placeholder="Login">
+        <div class="registartionloginText">Login</div>
+        <input type="login" id="registartionLoginInput" name="loginInput" placeholder="Login">
         <div class="emailText">Email</div>
         <input type="email" id="emailInput" name="emialInput" placeholder="Email">
-        <div class="passwordText">Hasło</div>
-        <input type="password" id="passwordInput" placeholder="Hasło">
+        <div class="registartionPasswordText">Hasło</div>
+        <input type="password" id="registartionPasswordInput" placeholder="Hasło">
         <div class="repeatPasswrodText">Powtórz hasło</div>
         <input type="password" id="repeatedPasswordInput" placeholder="Powtórz hasło">
         <div class ="spaceButton"></div>
@@ -14,7 +15,13 @@
     </div>
 
     <div style="width: 50%;float:right" class="login">
-        <div class="loginText2">Zaloguj</div>
+        <div class="loginText">Zaloguj</div>
+        <div class="inputLoginText">Login</div>
+        <input type="login" id="loginInput" name="loginInput" placeholder="Login">
+        <div class="passwordText">Hasło</div>
+        <input type="password" id="passwordInput" placeholder="Hasło">
+        <div class ="spaceButton"></div>
+        <button class="loginButton">Zaloguj</button>
     </div>
 </div>
-<button class="returnToMain">Główna</button>
+<button class="returnToMain" [routerLink]="['/']">Główna</button>

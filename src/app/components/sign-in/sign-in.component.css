@@ -10,7 +10,7 @@
 .registration{
     background-color: gray;
     padding-left: 15%;
-    padding-top: 5%;
+    padding-top: 10%;
 }
 
 .registrationText{
@@ -20,7 +20,7 @@
     padding-bottom: 2%;
 }
 
-.loginText{
+.registartionloginText{
     color: white;
     padding-top: 1%;
 }
@@ -30,7 +30,7 @@
     padding-top: 1%;
 }
 
-.passwordText{
+.registartionPasswordText{
     color: white;
     padding-top: 1%;
 }
@@ -46,7 +46,7 @@
 
 .registrationButton{
     position: relative;
-    width: 25%;
+    width: 30%;
     height: 8%;
     font-size: 25px;
     font-weight: bold;
@@ -55,10 +55,36 @@
 }
 
 .login{
-    background-color: tomato;
-    
-    
- 
+    background-color: gray;
+    padding-left: 15%;
+    padding-top: 10%;
+}
+
+.loginText{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+.inputLoginText{
+    color: white;
+    padding-top: 1%;  
+}
+
+.passwordText{
+    color: white;
+    padding-top: 1%;
+}
+
+.loginButton{
+    position: relative;
+    width: 30%;
+    height: 8%;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: RGB(166, 19, 3);
+    color: white;
 }
 
 .returnToMain{
@@ -68,7 +94,6 @@
     font-size: 25px;
     font-weight: bold;
     color: white;
-
 }
 
 

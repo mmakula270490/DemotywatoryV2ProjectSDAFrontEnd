@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 import { AppComponent } from './app.component';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AddDemotComponent } from './components/add-demot/add-demot.component';
@@ -28,7 +30,8 @@ import { TopBarGenericComponent } from './top-bar-generic/top-bar-generic.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

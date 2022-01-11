@@ -23,5 +23,5 @@ export class DemotService {
 
   public getDemotywatory(): Observable<Demotywator[]>{
     return this.httpClient.get<Demotywator[]>(`${this.demotyUrl}${this.demotyLimit}`, HTTP_OPTIONS);
-}
+  }
 }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Demotywator } from '../models/demotywator';
 import { Observable } from 'rxjs';
-import { GetResponseList } from '../models/getResponseList';
+import { GetResponseList } from '../models/GetResponseList';
 
 const HTTP_OPTIONS = {
   headers: new HttpHeaders({
@@ -32,7 +32,7 @@ export class DemotService {
           demotywator,
           HTTP_OPTIONS
       )
-    }
+  }
 
   public getDemotywatory(): Observable <GetResponseList>{
     return this.httpClient.get<GetResponseList>(`${this.demotyUrl}`, HTTP_OPTIONS);

@@ -1,0 +1,61 @@
+.mainList{ 
+    margin: 0 auto;
+    size-adjust: inherit;
+    position: relative;
+    list-style: none;
+    background-color:gray;
+}
+.topText{
+    margin-left: 40%;
+    width: 15%;
+    
+    text-align: center;  
+    color: white;
+    padding-top: 2%;
+}
+.img1{
+    
+    padding-left: 35%;
+}
+.bottomText{
+    margin-left: 40%;
+    width: 15%;
+   
+    text-align: center;  
+    color: white;
+}
+.img2{   
+    padding-left: 35%;
+}
+.likeButton{
+    width: 80px;
+    background-color: #4CAF50;
+    border-radius: 12px;
+    padding: 2px;
+    color: blue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 40%;
+    cursor: pointer;
+}
+.dislikeButton{
+    width: 80px;
+    background-color: red;
+    border-radius: 12px;
+    padding: 2px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin-left: 10%;
+    cursor: pointer;
+}
+.testButton{
+    border-radius: 12px;
+    display: flex;
+    margin-left: 20%;
+    align-items: center;
+}

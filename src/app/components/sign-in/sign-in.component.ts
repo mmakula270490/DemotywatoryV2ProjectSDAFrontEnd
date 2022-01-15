@@ -8,10 +8,12 @@ import { RegistrationServiceService } from 'src/app/service/registration.service
 })
 export class SignInComponent implements OnInit {
   errorMessege = '';
-  registrationUserName: string = '';
-  registrationUserEmail: string = '';
-  registrationUserPassword: string = '';
-  registrationUserRepeatedPassword: string = '';
+  registrationUserName!: string;
+  registrationUserEmail!: string;
+  registrationUserPassword!: string;
+
+  login! : String;
+  password! : String;
 
   user = {username: '', password: '', email: ''};
 
@@ -24,10 +26,8 @@ export class SignInComponent implements OnInit {
   registerUser(){
     this.registrationService.addUser(this.user)
       .subscribe(user => {
-        
       },
       error => this.errorMessege = error);
-      console.log(this.user)
   }
 
   

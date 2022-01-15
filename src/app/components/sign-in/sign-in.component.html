@@ -17,9 +17,9 @@
     <div style="width: 50%;float:right" class="login">
         <div class="loginText">Zaloguj</div>
         <div class="inputLoginText">Login</div>
-        <input type="login" id="loginInput" name="loginInput" placeholder="Login">
+        <input type="login" id="loginInput" name="loginInput" placeholder="Login"[(ngModel)]="login">
         <div class="passwordText">Hasło</div>
-        <input type="password" id="passwordInput" placeholder="Hasło">
+        <input type="password" id="passwordInput" placeholder="Hasło"[(ngModel)]="password">
         <div class ="spaceButton"></div>
         <button class="loginButton">Zaloguj</button>
     </div>

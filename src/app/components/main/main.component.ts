@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Demotywator } from 'src/app/models/demotywator';
-import { GetResponseList } from 'src/app/models/getResponseList';
+import { GetResponseList } from 'src/app/models/GetResponseList';
 import { DemotService } from 'src/app/service/demot.service';
 
 @Component({

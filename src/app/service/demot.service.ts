@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Demotywator } from '../models/demotywator';
 import { Observable } from 'rxjs';
+import { GetResponseList } from '../models/getResponseList';
 
 const HTTP_OPTIONS = {
   headers: new HttpHeaders({
@@ -17,11 +18,11 @@ export class DemotService {
   private demotyUrl: string = 'http://localhost:8080/api/posts';
   private demotyLimit: string = '?_limit=5';
 
-  demotywator: Demotywator[] = [];
+  demotywator!: Demotywator;
   
   constructor(private httpClient: HttpClient) { }
 
-  public getDemotywatory(): Observable<Demotywator[]>{
-    return this.httpClient.get<Demotywator[]>(`${this.demotyUrl}${this.demotyLimit}`, HTTP_OPTIONS);
+  public getDemotywatory(): Observable <GetResponseList>{
+    return this.httpClient.get<GetResponseList>(`${this.demotyUrl}`, HTTP_OPTIONS);
   }
 }

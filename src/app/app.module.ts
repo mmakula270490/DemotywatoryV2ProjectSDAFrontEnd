@@ -13,6 +13,7 @@ import { LoginButtonComponent } from './components/login-button/login-button.com
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { MainTextComponent } from './components/main-text/main-text.component';
 import { TopBarGenericComponent } from './top-bar-generic/top-bar-generic.component';
+import { MainListComponent } from './main-list/main-list.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TopBarGenericComponent } from './top-bar-generic/top-bar-generic.compon
     AddButtonComponent,
     MainTextComponent,
     SignInComponent,
-    TopBarGenericComponent
+    TopBarGenericComponent,
+    MainListComponent
   ],
   imports: [
     BrowserModule,

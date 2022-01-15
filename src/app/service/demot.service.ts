@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Demotywator } from '../models/demotywator';
 import { Observable } from 'rxjs';
-import { GetResponseList } from '../models/GetResponseList';
+import { GetResponseList } from '../models/getResponseList';
 
 const HTTP_OPTIONS = {
   headers: new HttpHeaders({

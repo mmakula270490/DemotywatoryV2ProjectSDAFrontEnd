@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, throwError } from 'rxjs';
-import { User } from '../user';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
@@ -14,10 +14,10 @@ export class RegistrationServiceService {
   addUser(user: User): Observable<User>{
     let httpHeaders = new HttpHeaders({
         'Content-Type' : 'application/json',
-        'Cache-Control' : 'no-cache'
     });
 
-    return this.http.post(this.registrationUrl, user, {headers: httpHeaders}).pipe(
+    return this.http.post(this.registrationUrl, user, {headers: httpHeaders})
+.pipe(
       map(this.extractData),
       catchError(this.handleErrorObservable)
     )

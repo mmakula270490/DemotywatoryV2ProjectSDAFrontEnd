@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 const HTTP_OPTIONS = {
   headers: new HttpHeaders({
     'Content-Type': 'application/json',
+    'Cache-Control' : 'no-cache'
   })
 }
 
@@ -14,14 +15,24 @@ const HTTP_OPTIONS = {
 })
 export class DemotService {
 
-  private demotyUrl: string = 'http://localhost:8080/api/posts';
-  private demotyLimit: string = '?_limit=5';
+  private demotywatoryUrl: string = 'http://localhost:8080/api/posts';
+ // private demotyLimit: string = '?_limit=5';
 
-  demotywator: Demotywator[] = [];
+  // demotywator: Demotywator[] = [];
   
-  constructor(private httpClient: HttpClient) { }
+   constructor(private httpClient: HttpClient) { }
 
-  public getDemotywatory(): Observable<Demotywator[]>{
-    return this.httpClient.get<Demotywator[]>(`${this.demotyUrl}${this.demotyLimit}`, HTTP_OPTIONS);
+  // public getDemotywatory(): Observable<Demotywator[]>{
+  //   return this.httpClient.get<Demotywator[]>(`${this.demotywatoryUrl}${this.demotyLimit}`, HTTP_OPTIONS);
+  // }
+
+  addNewPost(demotywator: Demotywator): Observable<Demotywator>{
+
+    console.log(demotywator);
+    return this.httpClient.post<Demotywator>(
+          this.demotywatoryUrl,
+          demotywator,
+          HTTP_OPTIONS
+      )
   }
 }

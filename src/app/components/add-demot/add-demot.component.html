@@ -3,13 +3,15 @@
     <div>
     <div class="addText">Dodaj</div>
     <div class="title">Tytuł:</div>
-    <input type="title" id="titleId" name="title" placeholder="Tytuł">
+    <input type="title" id="titleId" name="title" placeholder="Tytuł" [(ngModel)]="title">
     <div class="title">Źródło obrazka:</div>
-    <input type="source" id="sourceId" name="source" placeholder="Źródło">
+    <input type="source" id="sourceId" name="source" placeholder="Źródło" [(ngModel)]="source">
     <div class="title">Podpis pod obrazkiem:</div>
-    <input type="subtitle" id="subtitleId" name="subtitle" placeholder="Ścieżka">
+    <input type="subtitle" id="subtitleId" name="subtitle" placeholder="Ścieżka" [(ngModel)]="subtitle">
     </div>
-    <button class="addButon">Dodaj</button>
+    <button class="addButon"
+    
+    (click)="onclick()">Dodaj</button>
 </div>
 
 <button class="returnToMain" [routerLink]="['/']">Główna</button>

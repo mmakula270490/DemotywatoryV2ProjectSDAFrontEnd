@@ -1,5 +1,5 @@
 export class Demotywator {
-    id?: number;
+    id!: number;
     topText!: String;
     imagePath!: String;
     bottomText!: String;

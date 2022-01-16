@@ -16,8 +16,12 @@ export class MainListComponent implements OnInit {
   }
 
   voteUp(id: number): void {
-    this.demotService.voteUp(id).subscribe();
+    this.demotService.voteUp(id).subscribe(demot =>{});
     
+  }
+
+  voteDown(id: number): void {
+    this.demotService.voteDown(id).subscribe(demot =>{})
   }
 
 }

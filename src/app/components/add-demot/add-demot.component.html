@@ -5,8 +5,10 @@
     <div class="title">Tytuł:</div>
     <input type="title" id="titleId" name="title" placeholder="Tytuł" [(ngModel)]="title">
     <div class="title">Źródło obrazka:</div>
-    <input type="source" id="sourceId" name="source" placeholder="Źródło" [(ngModel)]="source">
-    <div class="title">Podpis pod obrazkiem:</div>
+    <div>
+        <input type="file" class="file-upload" onchange="">
+        <div class="image"></div>
+    </div>
     <input type="subtitle" id="subtitleId" name="subtitle" placeholder="Ścieżka" [(ngModel)]="subtitle">
     </div>
     <button class="addButon"

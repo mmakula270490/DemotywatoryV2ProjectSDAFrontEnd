@@ -1,18 +1,20 @@
 <app-top-bar-generic></app-top-bar-generic>
 <div class="registration">
     <div>
-    <div class="addText">Dodaj</div>
-    <div class="title">Tytuł:</div>
-    <input type="title" id="titleId" name="title" placeholder="Tytuł" [(ngModel)]="title">
-    <div class="title">Źródło obrazka:</div>
-    <div>
-        <input type="file" class="file-upload" onchange="">
-        <div class="image"></div>
+        <div class="addText">Dodaj</div>
+        <div class="title">Tytuł:</div>
+        <input type="title" id="titleId" name="title" placeholder="Tytuł" [(ngModel)]="title">
+        <div class="title">Źródło obrazka:</div>
+        <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+        <div class="file-upload">
+            {{fileName || "No file uploaded yet."}}
+            <button (click)="fileUpload.click()">
+                Dodaj
+            </button>
+        </div>
+        <input type="subtitle" id="subtitleId" name="subtitle" placeholder="Ścieżka" [(ngModel)]="subtitle">
     </div>
-    <input type="subtitle" id="subtitleId" name="subtitle" placeholder="Ścieżka" [(ngModel)]="subtitle">
-    </div>
-    <button class="addButon"
-    (click)="onclick()">Dodaj</button>
+    <button class="addButon" (click)="onclick()">Dodaj</button>
 </div>
 
 <button class="returnToMain" [routerLink]="['/']">Główna</button>

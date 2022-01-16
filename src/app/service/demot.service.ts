@@ -17,8 +17,6 @@ const HTTP_OPTIONS = {
 export class DemotService {
 
   private demotyUrl: string = 'http://localhost:8080/api/posts';
- // private demotyLimit: string = '?_limit=5';
-
 
   demotywator!: Demotywator;
   

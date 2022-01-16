@@ -11,6 +11,8 @@
     background-color: gray;
     padding-left: 25%;
     padding-top: 10%;
+    width: 50%; 
+    float: left
 }
 
 .registrationText{
@@ -52,6 +54,8 @@
 .login{
     background-color: gray;
     padding-top: 10%;
+    width: 50%;
+    float:right
 }
 
 .loginText{

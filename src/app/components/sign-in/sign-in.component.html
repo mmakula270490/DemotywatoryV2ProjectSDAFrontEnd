@@ -1,6 +1,6 @@
 <app-top-bar-generic></app-top-bar-generic>
 <div class="box">
-    <div style="width: 50%; float: left;" class="registration">
+    <div class="registration">
         <div class="registrationText">Rejestracja</div>
         <div class="registartionloginText">Login</div>
         <input type="login" placeholder="Login"[(ngModel)]="registrationUserName">
@@ -14,12 +14,12 @@
         (click)="registrationButtonClick()">Rejestracja</button>
     </div>
 
-    <div style="width: 50%;float:right" class="login">
+    <div class="login">
         <div class="loginText">Zaloguj</div>
         <div class="inputLoginText">Login</div>
-        <input type="login" id="loginInput" name="loginInput" placeholder="Login">
+        <input type="login" id="loginInput" name="loginInput" placeholder="Login"[(ngModel)]="login">
         <div class="passwordText">Hasło</div>
-        <input type="password" id="passwordInput" placeholder="Hasło">
+        <input type="password" id="passwordInput" placeholder="Hasło"[(ngModel)]="password">
         <div class ="spaceButton"></div>
         <button class="loginButton">Zaloguj</button>
     </div>

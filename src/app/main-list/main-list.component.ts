@@ -15,9 +15,4 @@ export class MainListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  voteUp(id: number): void {
-    this.demotService.voteUp(id).subscribe();
-    
-  }
-
 }

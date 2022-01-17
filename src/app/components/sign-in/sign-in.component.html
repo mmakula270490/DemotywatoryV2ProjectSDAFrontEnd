@@ -21,7 +21,8 @@
         <div class="passwordText">Hasło</div>
         <input type="password" id="passwordInput" placeholder="Hasło"[(ngModel)]="password">
         <div class ="spaceButton"></div>
-        <button class="loginButton">Zaloguj</button>
+        <button class="loginButton"
+        (click)="loginButtonClick()">Zaloguj</button>
     </div>
 </div>
 <button class="returnToMain" [routerLink]="['/']">Główna</button>

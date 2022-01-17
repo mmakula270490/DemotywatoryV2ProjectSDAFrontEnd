@@ -7,7 +7,9 @@
         <div class="bottomText">
             {{demot.bottomText}}
         </div>
-        <div><button class="likeButton">like</button> 
-            <button class="dislikeButton">dislike</button>
+
+        <div><button class="likeButton" (click)="voteUp(demot.id)">like</button> 
+            <button class="dislikeButton" (click)="voteDown(demot.id)">dislike</button>
+
         </div>    
 </section>

@@ -28,7 +28,7 @@ import { MainListComponent } from './main-list/main-list.component';
     MainTextComponent,
     SignInComponent,
     TopBarGenericComponent,
-    MainListComponent
+    MainListComponent,
   ],
   imports: [
     BrowserModule,

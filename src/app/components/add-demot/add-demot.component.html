@@ -2,19 +2,32 @@
 <div class="registration">
     <div>
         <div class="addText">Dodaj</div>
-        <div class="title">Tytuł:</div>
-        <input type="title" id="titleId" name="title" placeholder="Tytuł" [(ngModel)]="title">
-        <div class="title">Źródło obrazka:</div>
-        <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
-        <div class="file-upload">
-            {{fileName || "No file uploaded yet."}}
-            <button (click)="fileUpload.click()">
-                Dodaj
-            </button>
-        </div>
-        <input type="subtitle" id="subtitleId" name="subtitle" placeholder="Ścieżka" [(ngModel)]="subtitle">
+        <form [formGroup]="myForm" (ngSubmit)="submit()">
+            <div class="form-group">
+                <label for="topText">Top text</label>
+                <input formControlName="topText" id="topText" type="text" class="form-control">
+                <div *ngIf="f['topText'].touched && f['topText'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['topText'].errors && f['topText'].errors['required']">Top text is required.</div>
+                    <div *ngIf="f['topText'].errors && f['topText'].errors['minlength']">Top text should be 3 character.</div>
+                </div>
+                <div class="form-group">
+                <label for="bottomText">Bottom text</label>
+                <input formControlName="bottomText" id="bottomText" type="text" class="form-control">
+                <div *ngIf="f['bottomText'].touched && f['bottomText'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['bottomText'].errors && f['bottomText'].errors['required']">Bottom text is required.</div>
+                    <div *ngIf="f['bottomText'].errors && f['bottomText'].errors['minlength']">Bottom text should be 3 character.</div>
+                </div>
+            </div>
+            </div>
+            <div class="form-group">
+                <label for="file">Plik</label>
+                <input formControlName="file" id="file" type="file" class="form-control"
+                    (change)="onFileChange($event)">
+                <div *ngIf="f['file'].touched && f['file'].invalid" class="alert alert-danger">
+                    <div *ngIf="f['file'].errors && f['file'].errors['required']">Bottom text is required.</div>
+                </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Dodaj</button>
+        </form>
     </div>
-    <button class="addButon" (click)="onclick()">Dodaj</button>
-</div>
-
-<button class="returnToMain" [routerLink]="['/']">Główna</button>
+    <button class="returnToMain" [routerLink]="['/']">Główna</button>

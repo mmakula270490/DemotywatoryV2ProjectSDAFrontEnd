@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Demotywator } from 'src/app/models/demotywator';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DemotService } from 'src/app/service/demot.service';
 
 @Component({
@@ -10,52 +10,42 @@ import { DemotService } from 'src/app/service/demot.service';
 })
 export class AddDemotComponent implements OnInit {
 
-  title!: String;
-  source!: String;
-  subtitle!: String;
-  fileName = '';
+  myForm = new FormGroup({
+    topText: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    bottomText: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    file: new FormControl('', [Validators.required]),
+    fileSource: new FormControl('', [Validators.required])
+  });
+    
+  constructor(private DemotService: DemotService) { }
+      
+  get f(){
+    return this.myForm.controls;
+  }
+     
+  onFileChange(event:any) {
+  
+    if (event.target.files.length > 0) {
+      const file = event.target.files[0];
+      this.myForm.patchValue({
+        fileSource: file
+      });
+    }
+  }
+     
+  submit(){
+    const formData = new FormData();
+    formData.append('image', this.myForm.get('fileSource')!.value);
+    formData.append('topText', this.myForm.get('topText')!.value);
+    formData.append('bottomText', this.myForm.get('bottomText')!.value);
 
 
-  constructor(private demotService: DemotService, private http: HttpClient) { }
+    this.DemotService.addNewPost(formData)
+    .subscribe(res => {
+        alert('Uploaded Successfully.');
+      })
+  }
 
   ngOnInit(): void {
-  }
-
-  verifyForm(): boolean{
-    return this.title == undefined || this.source == undefined || this.subtitle == undefined;
-  }
-  
-  addNewPost(){
-    this.demotService.addNewPost(new Demotywator(
-    this.title,
-    this.source,
-    this.subtitle)).subscribe();
-  }
-
-  onclick(){
-    if(!this.verifyForm()){
-      this.addNewPost();
-    }
-    console.log("not valid form");
-  }
-
-
-  onFileSelected(event: any) {
-
-    const file:File = event.target.files[0];
-
-    if (file) {
-
-        this.fileName = file.name;
-
-        const formData = new FormData();
-
-        formData.append("thumbnail", file);
-
-        const upload$ = this.http.post("/api/thumbnail-upload", formData);
-
-        upload$.subscribe();
-    }
-}
-
+  } 
 }

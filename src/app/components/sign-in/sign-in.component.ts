@@ -3,6 +3,9 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { LoginService } from 'src/app/service/login.service';
 import { RegistrationServiceService } from 'src/app/service/registration.service';
 import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
+import { HttpClient, HttpRequest } from '@angular/common/http';
+import { User } from 'src/app/models/user';
 
 
 @Component({
@@ -15,42 +18,52 @@ export class SignInComponent implements OnInit {
   registrationUserName!: string;
   registrationUserEmail!: string;
   registrationUserPassword!: string;
-  
-  login! : string;
-  password! : string;
+
+  login!: string;
+  password!: string;
+  dialog!: string;
 
   // formdata!: FormData;
 
-  user = {username: '', password: '', email: ''};
+  user = { username: '', password: '', email: '' };
   formdata!: FormData;
 
-  constructor(private registrationService: RegistrationServiceService, private loginService: LoginService) { }
+  constructor(private registrationService: RegistrationServiceService,
+    private loginService: LoginService,
+    private router: Router) { }
 
   ngOnInit(): void {
-    
+
   }
 
-  registerUser(){
+  registerUser(user: User) {
     this.registrationService.addUser(this.user)
-      .subscribe(user => {
-      },
-      error => this.errorMessege = error);
+      .then(response => {
+        if (response.status == 200) {
+          this.navigateToMain()
+        }
+        else{
+          this.dialog = "Something went wrong!";
+        }
+      })
   }
 
-  registrationButtonClick(){
+  registrationButtonClick() {
     this.user.username = this.registrationUserName;
     this.user.email = this.registrationUserEmail;
     this.user.password = this.registrationUserPassword;
-    this.registerUser();
+
+    this.registerUser(this.user);
   }
 
-  loginButtonClick(){
+  loginButtonClick() {
     this.formdata = new FormData();
     this.formdata.append('username', this.login);
     this.formdata.append('password', this.password);
     this.loginService.loginUser(this.formdata);
-    // for (let values of this.formdata.entries()){
-    //   console.log(values[0] + " , " + values[1]);
-    // }
+  }
+
+  navigateToMain() {
+    this.router.navigateByUrl('/');
   }
 }

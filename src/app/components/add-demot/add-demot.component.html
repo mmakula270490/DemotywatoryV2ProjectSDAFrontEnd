@@ -1,33 +1,33 @@
 <app-top-bar-generic></app-top-bar-generic>
+<div class="box">
 <div class="registration">
-        <div class="addText">Dodaj</div>
-        <form [formGroup]="myForm" (ngSubmit)="submit()">
+    <div class="mainFormText">Dodaj</div>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label class="formText" for="topText">Top text</label>
+            <input formControlName="topText" id="topText" type="text" class="form-control">
+            <div *ngIf="f['topText'].touched && f['topText'].invalid" class="alert alert-danger">
+                <div *ngIf="f['topText'].errors && f['topText'].errors['required']">Top text is required.</div>
+                <div *ngIf="f['topText'].errors && f['topText'].errors['minlength']">Top text should be 3 character.</div>
+            </div>
             <div class="form-group">
-                <label class="topText" for="topText">Top text</label>
-                <input formControlName="topText" id="topText" type="text" class="form-control">
-                <div *ngIf="f['topText'].touched && f['topText'].invalid" class="alert alert-danger">
-                    <div *ngIf="f['topText'].errors && f['topText'].errors['required']">Top text is required.</div>
-                    <div *ngIf="f['topText'].errors && f['topText'].errors['minlength']">Top text should be 3 character.</div>
-                </div>
-                <div class="form-group">
-                <label class="bottomText" for="bottomText">Bottom text</label>
+                <label class="formText" for="bottomText">Bottom text</label>
                 <input formControlName="bottomText" id="bottomText" type="text" class="form-control">
                 <div *ngIf="f['bottomText'].touched && f['bottomText'].invalid" class="alert alert-danger">
                     <div *ngIf="f['bottomText'].errors && f['bottomText'].errors['required']">Bottom text is required.</div>
-                    <div *ngIf="f['bottomText'].errors && f['bottomText'].errors['minlength']">Bottom text should be 3 character.</div>
+                    <div *ngIf="f['bottomText'].errors && f['bottomText'].errors['minlength']">Top text should be 3 character.</div>
                 </div>
             </div>
+        </div>
+        <div class="form-group">
+            <label class="formText" for="file">Plik</label>
+            <input formControlName="file" id="file" type="file" class="form-control" (change)="onFileChange($event)">
+            <div *ngIf="f['file'].touched && f['file'].invalid" class="alert alert-danger">
             </div>
-            <div class="form-group">
-                <label class="fileText" for="file">Plik</label>
-                <input formControlName="file" id="file" type="file" class="form-control"
-                    (change)="onFileChange($event)">
-                <div *ngIf="f['file'].touched && f['file'].invalid" class="alert alert-danger">
-                    <div *ngIf="f['file'].errors && f['file'].errors['required']">Bottom text is required.</div>
-                </div>
-            </div>
-            <div class="space"></div>
-            <button class="btn-primary" type="submit">Dodaj</button>
-        </form>        
-    </div>
+        </div>
+        <div class="space"></div>
+    </form>
+    <button class="btn-primary" type="submit" >Dodaj</button>
+</div>
+</div>
 <button class="returnToMain" [routerLink]="['/']">Główna</button>

@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { 
+height: 100%; 
+background-color: gray;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
@@ -8,10 +10,31 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .returnToMain{
     width: 100%;
-    height: 8%;
+    height: 7%;
     padding-left: 0%;
     background-color: RGB(166, 19, 3);
-    font-size: 25px;
     font-weight: bold;
+    font-size: xx-large;
+    color: white;
+}
+
+.mainFormText{
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    padding-bottom: 2%;
+}
+
+.formText{
+    color: white;
+}
+
+.btn-primary{
+    position: relative;
+    width: 30%;
+    height: 8%;
+    font-size: 90%;
+    font-weight: bold;
+    background-color: RGB(166, 19, 3);
     color: white;
 }

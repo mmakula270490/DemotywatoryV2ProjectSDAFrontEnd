@@ -1,28 +1,28 @@
 <app-top-bar-generic></app-top-bar-generic>
 <div class="box">
     <div class="registration">
-        <div class="registrationText">Rejestracja</div>
+        <div class="mainFormText">Rejestracja</div>
         <div class="registartionloginText">Login</div>
-        <input type="login" placeholder="Login"[(ngModel)]="registrationUserName">
+        <input type="login" placeholder="Login" [(ngModel)]="registrationUserName">
         <div class="emailText">Email</div>
-        <input type="email" placeholder="Email"[(ngModel)]="registrationUserEmail">
+        <input type="email" placeholder="Email" [(ngModel)]="registrationUserEmail">
         <div class="registartionPasswordText">Hasło</div>
-        <input type="password" placeholder="Hasło"[(ngModel)]="registrationUserPassword">
-        
-        <div class ="spaceButton"></div>
-        <button class="registrationButton"
-        (click)="registrationButtonClick()">Rejestracja</button>
+        <input type="password" placeholder="Hasło" [(ngModel)]="registrationUserPassword">
+
+        <div class="spaceButton"></div>
+        <button class="btn-primary" (click)="registrationButtonClick()">Rejestracja</button>
+        <div class="spaceButton"></div>
+        <div>{{this.dialog}}</div>
     </div>
 
     <div class="login">
-        <div class="loginText">Zaloguj</div>
+        <div class="mainFormText">Zaloguj</div>
         <div class="inputLoginText">Login</div>
-        <input type="login" id="loginInput" name="loginInput" placeholder="Login"[(ngModel)]="login">
+        <input type="login" id="loginInput" name="loginInput" placeholder="Login" [(ngModel)]="login">
         <div class="passwordText">Hasło</div>
-        <input type="password" id="passwordInput" placeholder="Hasło"[(ngModel)]="password">
-        <div class ="spaceButton"></div>
-        <button class="loginButton"
-        (click)="loginButtonClick()">Zaloguj</button>
+        <input type="password" id="passwordInput" placeholder="Hasło" [(ngModel)]="password">
+        <div class="spaceButton"></div>
+        <button class="btn-primary" (click)="loginButtonClick()">Zaloguj</button>
     </div>
 </div>
 

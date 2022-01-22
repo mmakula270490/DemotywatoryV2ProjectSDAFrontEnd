@@ -1,35 +1,30 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { catchError, map, Observable, throwError } from 'rxjs';
 import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RegistrationServiceService {
+
   registrationUrl = 'http://localhost:8080/api/users'
+  httpHeaders = new HttpHeaders({
+    'Content-Type': 'application/json',
+  });
 
   constructor(private http: HttpClient) { }
-  
-  addUser(user: User): Observable<User>{
-    let httpHeaders = new HttpHeaders({
-        'Content-Type' : 'application/json',
-    });
 
-    return this.http.post(this.registrationUrl, user, {headers: httpHeaders})
-.pipe(
-      map(this.extractData),
-      catchError(this.handleErrorObservable)
-    )
+  async addUser(user: User) {
+    
+    const response = await fetch(this.registrationUrl,
+      {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(user)
+      })
+    return response;
   };
-
-  private extractData(res: any) {
-    let body = res;
-    return body;
-  }
-  private handleErrorObservable(error: any) {
-    console.error(error.message || error);
-    return throwError(error);
-  } 
-
+  
 }

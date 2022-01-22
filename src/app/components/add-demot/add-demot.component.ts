@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DemotService } from 'src/app/service/demot.service';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-add-demot',
@@ -17,7 +18,7 @@ export class AddDemotComponent implements OnInit {
     fileSource: new FormControl('', [Validators.required])
   });
     
-  constructor(private DemotService: DemotService) { }
+  constructor(private DemotService: DemotService, private router: Router) { }
       
   get f(){
     return this.myForm.controls;
@@ -44,8 +45,16 @@ export class AddDemotComponent implements OnInit {
     .subscribe(res => {
         alert('Uploaded Successfully.');
       })
+
+      if(this.myForm.valid){
+        this.navigateToMain();
+      }
   }
 
   ngOnInit(): void {
   } 
+
+  navigateToMain() {
+    this.router.navigateByUrl('/');
+  }
 }
